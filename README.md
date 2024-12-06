@@ -6,7 +6,7 @@ Program that lets the user extract and create .PAC files used in games for the T
 2. Due to GarBro's wonky implementation on detecting the extension of each file, GarBro is unable to detect the extensions on GRD files unless the file name has the word `grd`in it. The same logic somewhat applies to .srp files (the script files), but no to be worried, the files created with this program load in-game perfectly fine.
 
 ### How are PAC files structured?
-While the code also documents how the save file is structured, here it is also the same information on a more accessible manner:
+While the code also documents how a pac file is structured, here it is also the same information on a more accessible manner:
 The file is divided into 3 parts:
   * **Header**: Number of files (2 bytes) + Length of each file name (1 byte) + Raw data offset (4 bytes)
     * Number of files: each file is an entry, so we calculate how many of them the PAC file contains
