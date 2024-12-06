@@ -1,4 +1,4 @@
-# PACKager
+# PACkager
 Program that lets the user extract and create .PAC files used in games for the Tmr-Hiro ADV System (mostly Marigold produced games).
 
 ### Notes on its usage
