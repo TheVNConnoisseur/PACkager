@@ -245,14 +245,22 @@ namespace PACkager.Pac
                         Directory.CreateDirectory(NewFilePath + "\\" + NewFolderName);
                     }
                     File.WriteAllBytes(NewFilePath + "\\" + NewFolderName + "\\" + FileName[CurrentEntry] + FileExtension[CurrentEntry], CreateFile(FileOffset[CurrentEntry], FileLength[CurrentEntry], FileData[CurrentEntry]));
-                    MessageBox.Show($"Process completed successfully.", "Conversion completed.", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
                     File.WriteAllBytes(NewFilePath + "\\" + FileName[CurrentEntry] + FileExtension[CurrentEntry], CreateFile(FileOffset[CurrentEntry], FileLength[CurrentEntry], FileData[CurrentEntry]));
-                    MessageBox.Show($"Process completed successfully. If you need to know, this file is packaged " +
-                        $"using version " + GetVersion() + " standards.", "Conversion completed.", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
+            }
+
+            //Inform the user that the process finalized successfully
+            if (NewFolderName != string.Empty)
+            {
+                MessageBox.Show($"Process completed successfully.", "Conversion completed.", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show($"Process completed successfully. If you need to know, this file is packaged " +
+                        $"using version " + GetVersion() + " standards.", "Conversion completed.", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }
