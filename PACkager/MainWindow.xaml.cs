@@ -111,6 +111,13 @@ namespace PACkager
                                 Data.Initialize();
                             }
                         }
+
+                        //Reports the user that the process has finalized correctly (but only through this way
+                        //if the user had multiple files to process, in order to avoid showing 1 message per file)
+                        if (FilePaths.Length != 0)
+                        {
+                            MessageBox.Show($"Process completed successfully.", "Conversion completed.", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
                     }
                     catch (Exception ex)
                     {

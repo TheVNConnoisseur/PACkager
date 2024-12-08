@@ -252,12 +252,8 @@ namespace PACkager.Pac
                 }
             }
 
-            //Inform the user that the process finalized successfully
-            if (NewFolderName != string.Empty)
-            {
-                MessageBox.Show($"Process completed successfully.", "Conversion completed.", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else
+            //Inform the user that the process finalized successfully and the version used for the .PAC file
+            if (NewFolderName == string.Empty)
             {
                 MessageBox.Show($"Process completed successfully. If you need to know, this file is packaged " +
                         $"using version " + GetVersion() + " standards.", "Conversion completed.", MessageBoxButton.OK, MessageBoxImage.Information);
