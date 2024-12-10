@@ -147,9 +147,6 @@ namespace PACkager.Pac
 
             for (int CurrentEntry = 0; CurrentEntry < NumberofFiles; CurrentEntry++)
             {
-
-                int e = BitConverter.ToInt32(FileData, (int)FileOffset[CurrentEntry] + 4);
-
                 //First we evaluate if it is a SRP file
                 if (BitConverter.ToInt16(FileData, (int)FileOffset[CurrentEntry] + FileLength[CurrentEntry] - 2).CompareTo(0x03) == 0 && BitConverter.ToInt16(FileData, (int)(FileOffset[CurrentEntry] + FileLength[CurrentEntry] - 4)).CompareTo(0x10) == 0)
                 {
