@@ -3,7 +3,7 @@ Program that lets the user extract and create .PAC files used in games for the T
 
 ### Notes on its usage
 1. If more than 1 file is selected, it will ***not*** report the version used for packing the file after completing the unpacking operation.
-2. Due to GarBro's wonky implementation on detecting the extension of each file, GarBro is unable to detect the extensions on GRD files unless the file name has the word `grd`in it. The same logic somewhat applies to .srp files (the script files), but no to be worried, the files created with this program load in-game perfectly fine.
+2. Due to GarBro's wonky implementation on detecting the extension of each file, GarBro is unable to detect the extensions on GRD files unless the file name has the word `grd`in it. The same logic somewhat applies to .srp files (the script files), but not to be worried, the files created with this program load in-game perfectly fine.
 
 ### How are PAC files structured?
 While the code also documents how a .PAC file is structured, here it is also the same information on a more accessible manner.
